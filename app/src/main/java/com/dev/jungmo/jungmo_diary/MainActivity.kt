@@ -15,11 +15,9 @@ class MainActivity : Activity(), OnMapReadyCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        this.setContentView(R.layout.activity_main)
 
-        val fragmentManager = fragmentManager
-        val mapFragment = fragmentManager
-            .findFragmentById(R.id.map) as MapFragment
+        val mapFragment = fragmentManager.findFragmentById(R.id.map) as MapFragment
         mapFragment.getMapAsync(this)
     }
 
